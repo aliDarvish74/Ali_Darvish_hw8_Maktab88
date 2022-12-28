@@ -1,0 +1,81 @@
+@font-face {
+  font-family: bYekan;
+  font-style: normal;
+  src: url(IRANYekan.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: bYekan;
+  font-size: 14px;
+}
+body {
+  height: 100vh;
+  background: url(earthBackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  gap: 8px;
+  align-items: center;
+  justify-items: stretch;
+  padding: 40px 40px;
+}
+.login-form p {
+  color: white;
+}
+.input-container {
+  background-color: #6c757d;
+  border-radius: 5px;
+  border: 0.1px solid #ced4da;
+}
+.icon {
+  padding: 5px 13px 5px 7px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+.icon2 {
+  padding: 5px 13px 5px 8px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+input {
+  padding: 5px 6px;
+  border-radius: 5px 0 0 5px;
+  border: 0.1px solid #ced4da;
+  width: 250px;
+}
+button {
+  width: 286px;
+  padding: 5px;
+  background-color: #28a745;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  color: white;
+}
+button:hover {
+  background: #03dd36;
+  cursor: pointer;
+}
+#userMsg,
+#passMsg,
+#passTestMsg {
+  color: red;
+  font-size: 12px;
+  align-self: flex-start;
+}
+
+.error::placeholder {
+  color: red;
+}

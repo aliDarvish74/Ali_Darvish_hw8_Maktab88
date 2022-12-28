@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>DOM 1-5</title>
+  </head>
+  <body>
+    <form class="login-form">
+      <p>ثبت نام</p>
+      <div class="input-container">
+        <i class="fa fa-user-o icon" aria-hidden="true"></i>
+        <input
+          id="userName"
+          name="username"
+          type="text"
+          placeholder="نام کاربری"
+        /><br />
+      </div>
+      <span id="userMsg"></span>
+
+      <div class="input-container">
+        <i class="fa fa-lock icon2" aria-hidden="true"></i>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="رمز عبور"
+        />
+      </div>
+      <p id="passMsg"></p>
+
+      <div class="input-container">
+        <i class="fa fa-lock icon2" aria-hidden="true"></i>
+        <input
+          id="passwordTest"
+          name="confirmPassword"
+          type="password"
+          placeholder="تکرار رمز عبور"
+        />
+      </div>
+      <p id="passTestMsg"></p>
+
+      <button id="btn" type="button">ورود</button>
+    </form>
+  </body>
+  <script src="main.js"></script>
+</html>

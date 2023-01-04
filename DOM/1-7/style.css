@@ -23,9 +23,6 @@ tr:nth-child(odd) {
 }
 tr:nth-child(even) {
   background-color: white;
-  color: rgb(0, 37, 70);
-  border-left: 1px solid rgb(0, 37, 70);
-  border-right: 1px solid rgb(0, 37, 70);
 }
 tr:first-child {
   background-color: rgb(65, 65, 65);

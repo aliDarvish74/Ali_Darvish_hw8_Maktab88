@@ -14,6 +14,7 @@ td,
 th {
   padding: 8px 16px;
   text-transform: capitalize;
+  text-align: left;
 }
 
 tr:nth-child(odd) {

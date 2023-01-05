@@ -11,9 +11,111 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>DOM 1-6</title>
+    <title>DOM 1-7</title>
   </head>
-  <body></body>
+  <body>
+    <section id="tableContainer"></section>
+    <div class="modalContainer" id="modalContainer" style="display: none">
+      <div class="userModal">
+        <div class="modalHeader container">
+          User Information
+          <button id="closeModal" onclick="modalClose()">&times;</button>
+        </div>
+        <div class="modalBody container">
+          <form id="userDataForm">
+            <div class="formRow">
+              <label for="uid">UID:</label>
+              <input
+                type="text"
+                name="uid"
+                id="uidInput"
+                placeholder="UID"
+                disabled
+              />
+            </div>
+            <div class="formRow">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                name="firstname"
+                id="firstnameInput"
+                placeholder="First Name"
+                disabled
+              />
+            </div>
+            <div class="formRow">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastnameInput"
+                placeholder="Last Name"
+                disabled
+              />
+            </div>
+            <div class="formRow">
+              <label for="city">City:</label>
+              <input
+                type="text"
+                name="city"
+                id="cityInput"
+                placeholder="City"
+                disabled
+              />
+            </div>
+            <div class="formRow">
+              <label for="postalCode">Postal Code:</label>
+              <input
+                type="text"
+                name="postalCode"
+                id="postalCodeInput"
+                placeholder="Postal Code"
+                disabled
+              />
+            </div>
+            <div class="formRow">
+              <label for="phoneNumber">Phone Number:</label>
+              <input
+                type="text"
+                name="phoneNumber"
+                id="phoneNumberInput"
+                placeholder="Phone Number"
+                disabled
+              />
+            </div>
+            <div class="formRow">
+              <label for="position">Position:</label>
+              <input
+                type="text"
+                name="position"
+                id="positionInput"
+                placeholder="Position"
+                disabled
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modalFooter">
+          <button
+            id="modalCreateBtn"
+            class="btn createBtn"
+            style="display: none"
+          >
+            CREATE
+          </button>
+          <button id="updateBtn" class="btn updateBtn">UPDATE</button>
+          <button id="submitBtn" style="display: none" class="btn updateBtn">
+            SUBMIT
+          </button>
+          <button id="deleteBtn" class="btn deleteBtn">DELETE</button>
+          <button id="cancelBtn" class="btn cancelBtn" onclick="modalClose()">
+            CANCEL
+          </button>
+        </div>
+      </div>
+    </div>
+    <button id="createBtn" class="btn-circle"><span>&plus;</span></button>
+  </body>
   <script src="user-data.js"></script>
   <script src="main.js"></script>
 </html>

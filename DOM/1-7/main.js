@@ -94,7 +94,7 @@ function createToggle() {
 function createUser() {
   let newUserData = dataStorageGet("userData", userData);
   let formData = document.querySelectorAll("#userDataForm input");
-  let uid = +document.getElementById("uidInput").value;
+  let uid = Number(document.getElementById("uidInput").value);
   for (const input of formData) {
     if (input.value === "") {
       alert(`All inputs must be filled!`);
@@ -104,7 +104,11 @@ function createUser() {
   let duplicateObj = newUserData.filter((item) => item.uid === uid);
   console.log(duplicateObj);
   if (duplicateObj.length != 0) {
-    alert(`Duplicat UID fourn. please enter another UID`);
+    alert(`Duplicate UID found. please enter another UID`);
+    return;
+  }
+  if (isNaN(uid)) {
+    alert(`UID must be a number!`);
     return;
   }
   let newUser = {
@@ -210,6 +214,7 @@ function dataStorageSet(inputKey, inputData) {
 }
 
 function sort(target, data, tableParent) {
+  let newUserData = dataStorageGet("userData", userData);
   let sortTarget = target.innerHTML;
   if (sortTarget === "row") {
     return;
@@ -219,6 +224,7 @@ function sort(target, data, tableParent) {
       obj2[sortTarget] - obj1[sortTarget] ||
       obj2[sortTarget].localeCompare(obj1[sortTarget])
   );
+  dataStorageSet("userData", newUserData);
   dataLogger(tableParent, data);
 }
 

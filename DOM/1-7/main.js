@@ -122,8 +122,8 @@ function createUser() {
   };
 
   newUserData.push(newUser);
-  dataLogger(tableContainer, newUserData);
   dataStorageSet("userData", newUserData);
+  dataLogger(tableContainer, newUserData);
   modalClose();
 }
 
@@ -148,7 +148,7 @@ function updateSubmit() {
   let newUserData = dataStorageGet("userData", userData);
   let formData = document.querySelectorAll("#userDataForm input");
   for (const input of formData) {
-    if (input.value === "") {
+    if (input.value.trim() === "") {
       alert(`All Data Fields Must Fill!`);
       return;
     }
